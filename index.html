@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sagar Hebbale - Portfolio</title>
+<link href='http://fonts.googleapis.com/css?family=Cantarell|Oswald' rel='stylesheet' type='text/css'>
+<link href="landingPage.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="nivo/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script src="prettyphoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+		//Set opacity on each span to 0%
+		$(".rollover").css({'opacity':'0'});
+		 
+		$('#gallery a.item').hover(
+			function() {
+				$(this).find('.rollover').stop().fadeTo(500, 1);
+			},
+			function() {
+				$(this).find('.rollover').stop().fadeTo(500, 0);
+			}
+		)
+		});
+</script>
+
+<script type="text/javascript">
+function show(id) {
+  // Get the DOM reference
+  var contentId = document.getElementById(id);
+   		contentId.style.display = "block";
+ 		console.log('Show', id);
+   
+ }
+</script>
+
+<script type="text/javascript">
+function hide(id) {
+  // Get the DOM reference
+  var contentId = document.getElementById(id);
+  
+  		contentId.style.display = "none";
+  		console.log('Hide', id);
+  
+ }
+</script>
+
+
+<script type="text/javascript" src="Js/jquery.tinycircleslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#rotatescroll').tinycircleslider({ interval: true, snaptodots: true , radius : 175 , intervaltime: 3500,  callback: function(element, index){
+     				console.log(element, index);
+     				switch (true) {
+        					case (index == 0): 
+            				console.log('Zero');
+            				show('FirstDesc');
+            				hide('SecondDesc');
+            				break;
+         					case (index == 1): 
+            				console.log('One');
+            				show('SecondDesc');
+            				hide('FirstDesc');
+            				break;
+		 					case (index == 2): 
+            				console.log('Two');
+            				show('ThirdDesc');
+            				hide('SecondDesc');
+            				break;
+         					case (index == 3): 
+            				console.log('Three');
+            				hide('ThirdDesc');
+            				show('FourthDesc');
+            				break;
+         					case (index == 4):
+         					hide('FourthDesc'); 
+            				console.log('Four');
+            				break;
+							default:
+            				break;
+    				}
+     				
+       		}
+	 });
+})
+</script>
+
+<script type = "text/javascript">
+	function changeInnerHtml(id){
+		if(document.getElementById(id).innerHTML == "About"){
+			    document.getElementById(id).href ="About.html";
+				document.getElementById(id).innerHTML="Home";
+
+		}
+		else{
+			document.getElementById(id).href ="CircleSlideriFrame.html";
+			document.getElementById(id).innerHTML="About";
+		}
+	}
+</script>
+</head>
+
+<body class='body'>
+ 	
+<div id="TopSection">
+ 	     <p id="header-logo"><h1>Sagar Hebbale</h1></p>
+    	 <p id='BigText'><h2>(iOS + Game) Developer</h2></p>
+        	<div id="header-menu" class= 'Choice'>
+        	     <ul>
+            	<li><a href="" target = "middle_section" id= 'About' onclick = "changeInnerHtml('About')" class = 'About'>About</a></li>
+                <li><a href="#" class = 'Work'>Work</a></li>
+                <li><a href="#" class='Resume'>Resume</a></li>
+                <li><a href="#" class='Contact'>Contact</a></li>
+             </div>
+     </div>
+
+<iframe frameborder="0" scrolling="yes" width="100%" height="500" 
+   src="CircleSlideriFrame.html" name="middle_section" id="midId">
+</iframe>
+
+
+	
+<div id='SummaryWrapper'>
+<div id='WorkSummary'> 
+	 <a href="#" class = 'Releases'><img src="Images/Releases.png"/></a></a>
+	 <a href="#" class = 'ProtoTypes'><img src="Images/Prototypes.png"/></a></a>
+	 <a href="#" class = 'TechSurvey'><img src="Images/Skills.png"/></a></a>
+	 <a href="#" class = 'CurrentProjects'><img src="Images/Projects.png"/></a></a>
+</div>
+ </div>
+ </body>
+
+

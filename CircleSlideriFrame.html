@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sagar Hebbale - Portfolio</title>
+<link href='http://fonts.googleapis.com/css?family=Cantarell|Oswald' rel='stylesheet' type='text/css'>
+<link href="circleSlider.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="nivo/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script src="prettyphoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+		//Set opacity on each span to 0%
+		$(".rollover").css({'opacity':'0'});
+		 
+		$('#gallery a.item').hover(
+			function() {
+				$(this).find('.rollover').stop().fadeTo(500, 1);
+			},
+			function() {
+				$(this).find('.rollover').stop().fadeTo(500, 0);
+			}
+		)
+		});
+</script>
+
+<script type="text/javascript">
+function show(id) {
+  // Get the DOM reference
+  var contentId = document.getElementById(id);
+   		contentId.style.display = "block";
+ 		console.log('Show', id);
+   
+ }
+</script>
+
+<script type="text/javascript">
+function hide(id) {
+  // Get the DOM reference
+  var contentId = document.getElementById(id);
+  
+  		contentId.style.display = "none";
+  		console.log('Hide', id);
+  
+ }
+</script>
+
+
+<script type="text/javascript" src="Js/jquery.tinycircleslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#rotatescroll').tinycircleslider({ interval: true, snaptodots: true , radius : 175 , intervaltime: 3500,  callback: function(element, index){
+     				console.log(element, index);
+     				switch (true) {
+        					case (index == 0): 
+            				console.log('Zero');
+            				show('FirstDesc');
+            				hide('SecondDesc');
+            				break;
+         					case (index == 1): 
+            				console.log('One');
+            				show('SecondDesc');
+            				hide('FirstDesc');
+            				break;
+		 					case (index == 2): 
+            				console.log('Two');
+            				show('ThirdDesc');
+            				hide('SecondDesc');
+            				break;
+         					case (index == 3): 
+            				console.log('Three');
+            				hide('ThirdDesc');
+            				show('FourthDesc');
+            				break;
+         					case (index == 4):
+         					hide('FourthDesc'); 
+            				console.log('Four');
+            				break;
+							default:
+            				break;
+    				}
+     				
+       		}
+	 });
+})
+</script>
+</head>
+
+
+<body>
+<div id= "MiddleSection">
+<div id="rotatescroll">
+		<div class="viewport">
+			<ul class="overview" style = "none">
+				<li><a href="#" id = "First"><img src="Images/IncantorBlue.jpg" /></a></li>
+				<li><a href="#" id = "Second"><img src="Images/map.png" /></a></li>
+				<li><a href="#" id = "Third"> <img src="Images/LarrysMissingMusic.jpg" /></a></li>
+				<li><a href="#" id = "Fourth"><img src="Images/git.png" /></a></li>
+				<li><a href="#" id = "Fifth"><img src="Images/utility.jpg" /></a></li>															
+			</ul>
+		</div>
+		<div class="dot"></div>
+		<div class="overlay"></div>
+		<div class="thumb"></div>
+		<div id = "Descriptors">
+		   <ul style = "none">
+		   <li><a class = "First" id = "FirstDesc"  style="display:none;" href="#"><img src="Images/Descrip1.png" /></a></li>
+		    <li><a class = "Second" id = "SecondDesc"  style="display:none;" href="#"><img src="Images/Descrip3.png" /></a></li>
+			<li><a class = "Third" id = "ThirdDesc"  style="display:none;" href="#"><img src="Images/Descrip2.png" /></a></li>
+			 <li><a class = "Fourth" id = "FourthDesc"  style="display:none;" href="#"><img src="Images/Descrip4.png" /></a></li>
+
+		  		   </ul>
+		   </div>
+		</div>
+
+
+</body>

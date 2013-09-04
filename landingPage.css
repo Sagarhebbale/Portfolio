@@ -1,0 +1,188 @@
+@font-face
+{
+font-family: FuturaCondensed;
+src: url('Fonts/a.ttf'),
+     url('Sansation_Light.eot'); /* IE9 */
+}
+
+@font-face
+{
+font-family: Digi;
+src: url('Fonts/a.ttf'),
+     url('Sansation_Light.eot'); /* IE9 */
+}
+body 
+{
+	background-color:#fff5ee;
+}
+
+#TopSection{
+	position:absolute;
+	left: 0%;
+	top:0%;
+	width:100%;
+	height:15%;
+    background-color:#fff5ee;
+}
+
+h1{
+	
+	position:absolute;
+	top: 10%;
+	left:8%;
+	font-size: 200%;
+	font-weight:100;
+	font-family: Digi;
+	color : #0067A5;
+	
+	
+}
+
+h2{
+	position:absolute;
+	top: 30%;
+	left:8%;
+	font-size: 200%;
+	font-family: Digi;
+	font-weight:100;
+	color : #0067A5;
+
+	
+}	
+
+
+#header-menu ul{
+	 list-style-type: none;	
+}
+
+
+#header-menu ul li a.About{
+	position: absolute;
+	top:45%;
+	left: 60%;
+	color : #000000;
+	font-family: Digi;
+	font-weight:lighter;
+	text-decoration : none;
+	font-size: 150%;
+	
+}
+
+#header-menu ul li a.Work{
+	position: absolute;
+	top:45%;
+	left: 70%;
+	color : #000000;
+	font-family: Digi;
+	font-weight:lighter;
+	text-decoration : none;
+	font-size: 150%;
+	
+}
+
+
+#header-menu ul li a.Resume{
+	position: absolute;
+	top:45%;
+	left: 80%;
+	color : #000000;
+	font-family: Digi;
+	font-weight:lighter;
+	text-decoration : none;
+	font-size: 150%;	
+	
+
+}
+
+#header-menu ul li a.Contact{
+	position: absolute;
+	top:45%;
+	left: 90%;
+	color : #000000;
+	font-family: Digi;
+	font-weight:lighter;
+	text-decoration : none;	
+	font-size: 150%;
+}
+
+#header-menu ul li a:hover{
+	//color: #1F2B38;
+	text-shadow: 0px 2px 3px #ffffff;
+	   
+}
+
+
+
+#SummaryWrapper
+ {
+ 	position:absolute;
+	left: 0%;
+	top:75%;
+	width:100%;
+	height:30%;
+    background-color:#fff5ee;
+	
+}
+
+#SummaryWrapper div a.Releases{
+	
+	position:absolute;
+	
+	top: 0%;
+	left:2%;
+}	
+
+#SummaryWrapper div a.Releases:hover{
+	
+	background-image: url('Images/Releases.png');
+}	
+
+#SummaryWrapper div a.ProtoTypes{
+	
+	position:absolute;
+	top: 0%;
+	left:25%;
+}
+
+#SummaryWrapper div a.ProtoTypes:hover{
+	
+	background-image: url('Images/Prototypes.png');
+}		
+
+#SummaryWrapper div a.TechSurvey{
+	
+	position:absolute;
+	top: 0%;
+	left:48%;
+}
+
+#SummaryWrapper div a.TechSurvey:hover{
+	
+	background-image: url('Images/Skills.png');
+}		
+
+#SummaryWrapper div a.CurrentProjects{
+	
+	position:absolute;
+	top: 0%;
+	left:71%;
+}
+
+#SummaryWrapper div a.CurrentProjects:hover{
+	
+	background-image: url('Images/Projects.png');
+}
+
+@media all and (max-height: 900px) and (min-height: 700px) {
+  #SummaryWrapper
+ {
+ 	display : none;	
+}
+}		
+
+
+
+
+	
+	
+	

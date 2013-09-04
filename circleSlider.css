@@ -1,0 +1,96 @@
+#MiddleSection{
+	background-color:#ffa5ee;
+}	
+
+ul{
+	list-style-type: none;
+}
+
+#rotatescroll { 
+	height:350px; 
+	position:absolute; 
+	width:350px; 
+	top:22%;
+	left:35%;
+	}
+#rotatescroll .viewport{ 
+	height:350px; 
+	position: relative; 
+	margin:0 auto; 
+	overflow:hidden; 
+	width:350px 
+	}
+
+#rotatescroll .overview { 
+	position: absolute; 
+	width: 798px; list-style: 
+	none; margin: 0; 
+	padding: 0;  
+	left: 0; 
+	top: 0;
+	 
+	}
+#rotatescroll .overview li { 
+  height:350px; 
+  width:350px; 
+  float: left; 
+  position: relative; 
+  }
+
+#rotatescroll .overlay {
+	background:url(Images/circle.png);  
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	height:350px; 
+	width:350px; 
+	}
+#rotatescroll .thumb { 
+	background:url(Images/bg-thumb.png) no-repeat 50% 50%; 
+	position: absolute; 
+	top: -3px; 
+	cursor: pointer; 
+	left: 200px; 
+	width: 50px; z-index: 200;  
+	height: 50px; 
+	}
+
+#rotatescroll .dot { 
+	background:url(Images/bg-dot.png) no-repeat 0 0; 
+	display: block; 
+	height: 10px; 
+	width: 10px; 
+	position: absolute; 
+	left: 155px; 
+	top: 0px; z-index: 100; 
+	}
+#rotatescroll .dot span { display: none; }
+
+#Descriptors .First{
+	
+	position:absolute;
+	top : -12%;
+	left: 47%
+}
+
+#Descriptors .Second{
+	
+	position:absolute;
+	top : 23%;
+	left: 95%
+}
+
+#Descriptors .Third{
+	
+	position:absolute;
+	top : 79%;
+	left: 80%
+}
+
+#Descriptors .Fourth{
+	
+	position:absolute;
+	top : 79%;
+	left: -95%
+}
+
